@@ -29,6 +29,12 @@ singleSpa.registerApplication(
 );
 
 singleSpa.registerApplication(
+  'auth-app',
+  () => import('single-spa-auth-app'),
+  showWhenAnyOf(['/login'])
+)
+
+singleSpa.registerApplication(
   'vue-app',
   () => import('single-spa-vue-app'),
   showWhenAnyOf(['/vue'])
