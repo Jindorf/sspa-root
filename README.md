@@ -1,9 +1,14 @@
 # sspa-root
+Example-repository for setting up a micro-frontend-architecture using npm-packages.
 ## Project setup
 ### install packages
 <code>
 npm install
 </code>
+
+this will also install the sspa-auth micro-fe <link>https://github.com/Jindorf/sspa-auth</link>  
+
+aswell as some micro-fes from <link>https://github.com/jualoppaz/single-spa-login-example-with-npm-packages</link>
 
 ### serve application locally
 <code>
@@ -28,7 +33,7 @@ Module not found: Error: Can't resolve 'style-loader' in '/home/jannik/program/s
 - removing style loader results in root-application to not load bootstrap and bootstrap-vue
   
 
-## TODO
+## TODO / Concerns
 ### Vuex
 App 1 has a Store 1  
 App 2 has a Store 2
