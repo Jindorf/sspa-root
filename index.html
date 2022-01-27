@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>single-spa</title>
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>single-spa</title>
+    </head>
 
-  <body>
-    <script src="/root-application.js"></script>
-    <nav>
-      <div id="layout-app"></div>
-    </nav>
-   <div id="vue-app"></div>
-   <div id="auth-app"></div>
-  </body>
+    <body>
+        <script src="/root-application.js"></script>
+        <nav style="margin-bottom: 10vh;">
+            <div id="single-spa-application:layout-app"></div>
+        </nav>
+        <div id="vue-app"></div>
+        <div id="single-spa-application:auth-app"></div>
+        <div id="react-app"></div>
+    </body>
 </html>

@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = () => ({
-    mode: "production",
+    mode: "development",
     entry: {
         "root-application": "root-application.js",
     },
@@ -14,8 +14,34 @@ module.exports = () => ({
     module: {
         rules: [
             {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                test: /\.(js)$/,
+                exclude: path.resolve(__dirname + "/node_modules/"),
+                use: {
+                    loader: "babel-loader",
+                },
+            },
+            {
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    {
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: ["postcss-preset-env"],
+                            },
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: { sassOptions: { outputStyle: "expanded" } },
+                    },
+                ],
             },
             {
                 test: /\.vue$/,

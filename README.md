@@ -3,7 +3,7 @@ Example-repository for setting up a micro-frontend-architecture using npm-packag
 ## Project setup
 ### install packages
 <code>
-npm install
+yarn install
 </code>
 
 this will also install the sspa-auth micro-fe <link>https://github.com/Jindorf/sspa-auth</link>  
@@ -12,26 +12,8 @@ aswell as some micro-fes from <link>https://github.com/jualoppaz/single-spa-logi
 
 ### serve application locally
 <code>
-npm run serve
+yarn serve
 </code>
-
-### problems with yarn
-trying <code> yarn install </code> will throw the following error  
-
-
-<code>
-ERROR in ./root-application.js
-Module not found: Error: Can't resolve 'style-loader' in '/home/jannik/program/sspa-root'
- @ ./root-application.js 6:0-46
-
-ERROR in ./root-application.js
-Module not found: Error: Can't resolve 'style-loader' in '/home/jannik/program/sspa-root'
- @ ./root-application.js 5:0-42
- </code>
- 
-- adding the style-loader to dependencies did not change behaviour
-- removing style loader results in root-application to not load bootstrap and bootstrap-vue
-  
 
 ## TODO / Concerns
 ### Vuex
@@ -43,6 +25,9 @@ App 2 has a Store 2
 - User switches to App 1  
   
 Does the data in Store 1 and Store 2 persist?
+
+<h3> --- Results --- </h3>   
+The data does <b> not </b> get stored. Switching from app 1 to app 2 unmounts app 1 => empties the store of app 1. 
 
 ### App-Standalone
 How is the developer-experience working in a standalone-app? (sspa-auth)

@@ -25,25 +25,25 @@ function showExcept(routes) {
 singleSpa.registerApplication(
   'layout',
   ()=> import('sspa-layout'),
-  showWhenAnyOf(['/'])
+  () => ['/']
 )
 
 singleSpa.registerApplication(
   'login',
   () => import('sspa-auth'),
-  showWhenAnyOf(['/login']),
+  showWhenPrefix(['/login'])
 );
 
 singleSpa.registerApplication(
   'vue-app',
   () => import('single-spa-vue-app'),
-  showWhenAnyOf(['/vue'])
+  showWhenPrefix(['/vue'])
 )
 
 singleSpa.registerApplication(
   'react-app',
   () => import('single-spa-react-app'),
-  showWhenAnyOf(['/react'])
+  showWhenPrefix(['/react'])
 )
 
 singleSpa.start();
