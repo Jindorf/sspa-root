@@ -23,21 +23,27 @@ function showExcept(routes) {
   };
 }
 singleSpa.registerApplication(
-  'login',
-  () => import('sspa-auth'),
-  showWhenAnyOf(['/']),
-);
+  'layout',
+  ()=> import('sspa-layout'),
+  showWhenAnyOf(['/'])
+)
 
 singleSpa.registerApplication(
-  'auth-app',
-  () => import('single-spa-auth-app'),
-  showWhenAnyOf(['/login'])
-)
+  'login',
+  () => import('sspa-auth'),
+  showWhenAnyOf(['/login']),
+);
 
 singleSpa.registerApplication(
   'vue-app',
   () => import('single-spa-vue-app'),
   showWhenAnyOf(['/vue'])
+)
+
+singleSpa.registerApplication(
+  'react-app',
+  () => import('single-spa-react-app'),
+  showWhenAnyOf(['/react'])
 )
 
 singleSpa.start();

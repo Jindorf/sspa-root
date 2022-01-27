@@ -34,17 +34,13 @@
     "bootstrap": "4.4.1",
     "bootstrap-vue": "2.2.2",
     "single-spa": "4.4.2",
-    "single-spa-angular-app": "0.1.5",
-    "single-spa-auth-app": "0.2.0",
-    "single-spa-home-app": "0.1.4",
-    "single-spa-layout-app": "0.2.5",
     "single-spa-react-app": "0.1.4",
     "single-spa-vue": "1.7.0",
     "single-spa-vue-app": "0.1.9",
     "sspa-auth": "github:Jindorf/sspa-auth",
+    "sspa-layout": "github:Jindorf/sspa-layout",
     "vue": "2.6.11",
     "vue-router": "3.1.4",
-    "vue-toastr": "2.1.2",
-    "zone.js": "0.10.2"
+    "vue-toastr": "2.1.2"
   }
 }
